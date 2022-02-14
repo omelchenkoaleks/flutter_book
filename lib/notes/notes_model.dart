@@ -4,5 +4,5 @@ class Note {
   String content = '';
   String color = '';
 
-  Note(this.title, this.content);
+  Note(this.id, this.title, this.content, this.color);
 }
