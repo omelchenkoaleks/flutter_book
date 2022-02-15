@@ -3,6 +3,4 @@ class Note {
   String title = '';
   String content = '';
   String color = '';
-
-  Note(this.id, this.title, this.content, this.color);
 }

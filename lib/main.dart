@@ -1,11 +1,26 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_book/appointments/appointments_list.dart';
 import 'package:flutter_book/contacts/contacts_list.dart';
 import 'package:flutter_book/notes/notes_list.dart';
 import 'package:flutter_book/tasks/tasks_list.dart';
+import 'package:path_provider/path_provider.dart';
+import 'utils.dart'as utils;
 
 void main() {
-  runApp(const FlutterBook());
+  WidgetsFlutterBinding.ensureInitialized();
+
+  print("## main(): FlutterBook Starting");
+
+  startMeUp() async {
+    Directory docsDir = await getApplicationDocumentsDirectory();
+    utils.docsDir = docsDir;
+    runApp(const FlutterBook());
+  }
+
+  startMeUp();
+
 }
 
 class FlutterBook extends StatelessWidget {
