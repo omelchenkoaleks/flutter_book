@@ -1,5 +1,6 @@
 import 'package:scoped_model/scoped_model.dart';
 
+
 class BaseModel extends Model {
   /*
     От этой переменной будет зависеть, какой именно экран сейчас отображается:
